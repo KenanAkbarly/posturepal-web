@@ -1,6 +1,171 @@
 {
+  "nav": {
+    "features": "Features",
+    "howItWorks": "How it works",
+    "privacy": "Privacy",
+    "download": "Download"
+  },
   "hero": {
-    "headline": "PosturePal",
-    "subheadline": "Marketing site placeholder — full content lands in Part 5."
+    "badge": "Privacy-first",
+    "headline": "Your posture, watched only by you",
+    "subheadline": "Real-time posture coaching from your webcam. Every frame is processed on your computer — nothing is uploaded, ever.",
+    "downloadMac": "Download for macOS",
+    "downloadWin": "Windows — coming soon",
+    "disclaimer": "Free. No account. No tracking.",
+    "previewBadge": "Preview",
+    "previewMetric": {
+      "cva": "CVA",
+      "asymmetry": "Asymmetry",
+      "alignment": "Alignment"
+    }
+  },
+  "features": {
+    "title": "Everything you need, nothing you don't",
+    "subtitle": "Six things PosturePal does well — and a long list of things it deliberately doesn't.",
+    "items": {
+      "privacy": {
+        "title": "Privacy by design",
+        "description": "Camera frames never leave your computer. There is no cloud component to bypass."
+      },
+      "realtime": {
+        "title": "Real-time detection",
+        "description": "MediaPipe Pose runs locally at 25-30 FPS, tracking your CVA, shoulder symmetry and spinal alignment frame-by-frame."
+      },
+      "personalized": {
+        "title": "Personalized baseline",
+        "description": "A 5-second calibration captures your individual normal posture, so alerts compare against you — not a generic textbook."
+      },
+      "clinical": {
+        "title": "Clinical safety net",
+        "description": "Research-backed thresholds (Kim 2024b, Cortes 2024, Moreira 2022) catch breaches even if your baseline calibration was off."
+      },
+      "multiLanguage": {
+        "title": "Multi-language",
+        "description": "Use PosturePal in English or Türkçe. The UI adapts entirely; nothing is left untranslated."
+      },
+      "freeOpen": {
+        "title": "Free and open",
+        "description": "Free to download. Source code on GitHub. Audit the privacy promise yourself."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Three steps. Five seconds. Done.",
+    "subtitle": "From install to actionable feedback in under a minute.",
+    "steps": {
+      "download": {
+        "title": "Download",
+        "description": "Grab the installer for macOS. No account, no email — just download and open."
+      },
+      "calibrate": {
+        "title": "Calibrate",
+        "description": "Sit naturally for 5 seconds. PosturePal records your normal posture as a personal baseline."
+      },
+      "monitor": {
+        "title": "Monitor",
+        "description": "Get gentle, intelligent alerts when you slip. The clinical safety layer protects against bad calibrations."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Your camera never leaves your computer",
+    "subtitle": "We don't have a server. There's nothing for us to leak, sell, or hand over to anyone.",
+    "points": {
+      "noCloud": {
+        "title": "No cloud",
+        "description": "Pose detection runs in WebAssembly inside the app. No frames or pose data are sent to a server — there isn't one."
+      },
+      "noTracking": {
+        "title": "No tracking",
+        "description": "No analytics, no telemetry, no third-party scripts. Not on this site. Not in the app."
+      },
+      "noAccount": {
+        "title": "No account",
+        "description": "We don't ask for an email, a name, or anything else. Install and use."
+      },
+      "openSource": {
+        "title": "Inspectable",
+        "description": "The source code is on GitHub. Read it. Diff it. Build it yourself if you want."
+      }
+    }
+  },
+  "requirements": {
+    "title": "System requirements",
+    "subtitle": "Modest. PosturePal runs on the laptop you already have.",
+    "common": {
+      "ram": "8 GB RAM",
+      "webcam": "Built-in or USB webcam"
+    },
+    "mac": {
+      "title": "macOS",
+      "os": "macOS 11 (Big Sur) or newer"
+    },
+    "windows": {
+      "title": "Windows",
+      "os": "Windows 10 or newer (planned)",
+      "comingSoon": "Coming soon"
+    }
+  },
+  "download": {
+    "title": "Get PosturePal",
+    "subtitle": "Free. macOS available now. Windows coming soon.",
+    "mac": {
+      "title": "macOS",
+      "version": "v0.0.1",
+      "size": "~168 MB · Apple Silicon (arm64)",
+      "cta": "Download .dmg",
+      "note": "Right-click the .dmg → Open on first run (build is unsigned, academic prototype)."
+    },
+    "windows": {
+      "title": "Windows",
+      "comingSoon": "Coming soon",
+      "eta": "Targeted for the next release",
+      "note": "Star the GitHub repo to be notified."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} PosturePal — Academic project by Kanan Akbarli",
+    "github": "GitHub",
+    "privacyLink": "Privacy"
+  },
+  "privacyPage": {
+    "back": "Back to home",
+    "title": "Privacy",
+    "lede": "PosturePal is built around a single rule: nothing about you leaves your computer. This page explains exactly what that means.",
+    "updated": "Last updated: May 2026",
+    "sections": {
+      "dataCollection": {
+        "title": "What data we collect",
+        "body": "Nothing. PosturePal has no server, no backend, no third party that receives your data.",
+        "point1": "Camera frames are processed in WebAssembly inside the app and immediately discarded.",
+        "point2": "Posture metrics (CVA, shoulder asymmetry, alignment angle) are stored locally in SQLite on your computer.",
+        "point3": "We have no analytics, no error reporting, no telemetry — anywhere."
+      },
+      "permissions": {
+        "title": "Permissions PosturePal asks for",
+        "camera": {
+          "body": "Camera: required, used only for live pose detection. The app never records, saves, or transmits camera frames."
+        },
+        "notifications": {
+          "body": "Notifications: optional, used to remind you when your posture slips. You can disable this in Settings at any time."
+        }
+      },
+      "localStorage": {
+        "title": "Local storage",
+        "body": "Settings, your calibration baseline, posture sessions, and 30-second posture snapshots are stored in a SQLite database under your operating system's standard application-data directory. You can delete this file at any time to wipe everything PosturePal knows about you."
+      },
+      "noTelemetry": {
+        "title": "No telemetry. Ever.",
+        "body": "Many apps quietly send 'usage statistics' or 'crash reports'. PosturePal does not. There is no out-of-band network traffic from the app."
+      },
+      "openSource": {
+        "title": "You don't have to take our word for it",
+        "body": "PosturePal is open source. The full code, including the network and IPC handlers, is auditable on GitHub:"
+      },
+      "contact": {
+        "title": "Questions",
+        "body": "If you find a privacy issue or want to clarify something, open an issue on the GitHub repository."
+      }
+    }
   }
 }

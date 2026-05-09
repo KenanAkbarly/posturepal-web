@@ -1,6 +1,171 @@
 {
+  "nav": {
+    "features": "Özellikler",
+    "howItWorks": "Nasıl çalışır",
+    "privacy": "Gizlilik",
+    "download": "İndir"
+  },
   "hero": {
-    "headline": "PosturePal",
-    "subheadline": "Marketing sayt placeholder — tam məzmun Part 5-də gəlir."
+    "badge": "Önce gizlilik",
+    "headline": "Duruşunuzu yalnızca siz görün",
+    "subheadline": "Kameranızdan gerçek zamanlı duruş koçluğu. Her kare sizin bilgisayarınızda işlenir — hiçbir şey hiçbir zaman yüklenmez.",
+    "downloadMac": "macOS için indir",
+    "downloadWin": "Windows — yakında",
+    "disclaimer": "Ücretsiz. Hesap yok. Takip yok.",
+    "previewBadge": "Önizleme",
+    "previewMetric": {
+      "cva": "CVA",
+      "asymmetry": "Asimetri",
+      "alignment": "Hizalama"
+    }
+  },
+  "features": {
+    "title": "İhtiyacınız olan her şey, fazlası değil",
+    "subtitle": "PosturePal'in iyi yaptığı altı şey — ve bilinçli olarak yapmadığı uzun bir liste.",
+    "items": {
+      "privacy": {
+        "title": "Tasarımdan gelen gizlilik",
+        "description": "Kamera kareleri bilgisayarınızdan asla çıkmaz. Atlatılacak bir bulut bileşeni yok."
+      },
+      "realtime": {
+        "title": "Gerçek zamanlı algılama",
+        "description": "MediaPipe Pose yerel olarak 25-30 FPS'de çalışır; CVA'nızı, omuz simetrinizi ve omurga hizanızı kare kare takip eder."
+      },
+      "personalized": {
+        "title": "Kişisel taban",
+        "description": "5 saniyelik bir kalibrasyon sizin normal duruşunuzu kaydeder, böylece uyarılar genel bir referansla değil sizinle karşılaştırılır."
+      },
+      "clinical": {
+        "title": "Klinik güvenlik ağı",
+        "description": "Araştırma destekli eşikler (Kim 2024b, Cortes 2024, Moreira 2022) kalibrasyonunuz hatalı olsa bile sınır aşımlarını yakalar."
+      },
+      "multiLanguage": {
+        "title": "Çok dilli",
+        "description": "PosturePal'i İngilizce veya Türkçe kullanın. Arayüz tamamen uyum sağlar; hiçbir şey çevrilmemiş kalmaz."
+      },
+      "freeOpen": {
+        "title": "Ücretsiz ve açık",
+        "description": "İndirmek ücretsiz. Kaynak kodu GitHub'da. Gizlilik vaadini kendiniz inceleyin."
+      }
+    }
+  },
+  "howItWorks": {
+    "title": "Üç adım. Beş saniye. Tamam.",
+    "subtitle": "Kurulumdan eyleme dönüştürülebilir geri bildirime bir dakikadan kısa sürede.",
+    "steps": {
+      "download": {
+        "title": "İndirin",
+        "description": "macOS için kurulum dosyasını alın. Hesap yok, e-posta yok — sadece indir ve aç."
+      },
+      "calibrate": {
+        "title": "Kalibre edin",
+        "description": "5 saniye boyunca rahatça oturun. PosturePal sizin normal duruşunuzu kişisel taban olarak kaydeder."
+      },
+      "monitor": {
+        "title": "İzleyin",
+        "description": "Duruşunuz bozulduğunda nazik ve akıllı uyarılar alın. Klinik güvenlik katmanı kötü kalibrasyonlara karşı koruma sağlar."
+      }
+    }
+  },
+  "privacy": {
+    "title": "Kameranız bilgisayarınızdan asla çıkmaz",
+    "subtitle": "Sunucumuz yok. Sızdıracak, satacak veya kimseye verecek hiçbir şeyimiz yok.",
+    "points": {
+      "noCloud": {
+        "title": "Bulut yok",
+        "description": "Duruş algılama, uygulamanın içinde WebAssembly'de çalışır. Sunucuya kare veya duruş verisi gönderilmez — sunucu yok."
+      },
+      "noTracking": {
+        "title": "Takip yok",
+        "description": "Analitik yok, telemetri yok, üçüncü taraf script yok. Bu sitede yok. Uygulamada yok."
+      },
+      "noAccount": {
+        "title": "Hesap yok",
+        "description": "E-posta, isim ya da başka bir şey istemiyoruz. Kur ve kullan."
+      },
+      "openSource": {
+        "title": "İncelenebilir",
+        "description": "Kaynak kodu GitHub'da. Okuyun. Karşılaştırın. İsterseniz kendiniz derleyin."
+      }
+    }
+  },
+  "requirements": {
+    "title": "Sistem gereksinimleri",
+    "subtitle": "Mütevazı. PosturePal halihazırda kullandığınız laptopta çalışır.",
+    "common": {
+      "ram": "8 GB RAM",
+      "webcam": "Dahili veya USB webcam"
+    },
+    "mac": {
+      "title": "macOS",
+      "os": "macOS 11 (Big Sur) veya daha yeni"
+    },
+    "windows": {
+      "title": "Windows",
+      "os": "Windows 10 veya daha yeni (planlandı)",
+      "comingSoon": "Yakında"
+    }
+  },
+  "download": {
+    "title": "PosturePal'i edinin",
+    "subtitle": "Ücretsiz. macOS şimdi mevcut. Windows yakında.",
+    "mac": {
+      "title": "macOS",
+      "version": "v0.0.1",
+      "size": "~168 MB · Apple Silicon (arm64)",
+      "cta": ".dmg indir",
+      "note": "İlk açılışta .dmg dosyasına sağ tıklayın → Aç (akademik prototip, imzasız)."
+    },
+    "windows": {
+      "title": "Windows",
+      "comingSoon": "Yakında",
+      "eta": "Bir sonraki sürüm için planlandı",
+      "note": "Bildirim almak için GitHub deposuna yıldız verin."
+    }
+  },
+  "footer": {
+    "copyright": "© {year} PosturePal — Kanan Akbarli'nin akademik projesi",
+    "github": "GitHub",
+    "privacyLink": "Gizlilik"
+  },
+  "privacyPage": {
+    "back": "Ana sayfaya dön",
+    "title": "Gizlilik",
+    "lede": "PosturePal tek bir kural üzerine kuruludur: sizinle ilgili hiçbir şey bilgisayarınızdan çıkmaz. Bu sayfa bunun tam olarak ne anlama geldiğini açıklar.",
+    "updated": "Son güncelleme: Mayıs 2026",
+    "sections": {
+      "dataCollection": {
+        "title": "Hangi verileri topluyoruz",
+        "body": "Hiçbiri. PosturePal'in sunucusu, arka uçu veya verilerinizi alan üçüncü tarafı yok.",
+        "point1": "Kamera kareleri uygulamanın içinde WebAssembly'de işlenir ve hemen atılır.",
+        "point2": "Duruş metrikleri (CVA, omuz asimetrisi, hizalama açısı) bilgisayarınızda yerel olarak SQLite içinde saklanır.",
+        "point3": "Hiçbir yerde analitiğimiz, hata raporlamamız veya telemetrimiz yok."
+      },
+      "permissions": {
+        "title": "PosturePal'in istediği izinler",
+        "camera": {
+          "body": "Kamera: zorunlu, yalnızca canlı duruş algılama için kullanılır. Uygulama hiçbir zaman kamera karelerini kaydetmez, saklamaz veya iletmez."
+        },
+        "notifications": {
+          "body": "Bildirimler: opsiyonel, duruşunuz bozulduğunda hatırlatmak için kullanılır. Ayarlar'dan istediğiniz zaman kapatabilirsiniz."
+        }
+      },
+      "localStorage": {
+        "title": "Yerel depolama",
+        "body": "Ayarlar, kalibrasyon tabanınız, duruş oturumlarınız ve 30 saniyelik duruş anlık görüntüleri, işletim sisteminizin standart uygulama veri dizinindeki bir SQLite veritabanında saklanır. PosturePal'in sizin hakkınızda bildiği her şeyi silmek için bu dosyayı istediğiniz zaman silebilirsiniz."
+      },
+      "noTelemetry": {
+        "title": "Telemetri yok. Hiç.",
+        "body": "Birçok uygulama sessizce 'kullanım istatistikleri' veya 'çökme raporları' gönderir. PosturePal göndermez. Uygulamadan harici ağ trafiği yoktur."
+      },
+      "openSource": {
+        "title": "Sözümüze inanmak zorunda değilsiniz",
+        "body": "PosturePal açık kaynaktır. Ağ ve IPC işleyicileri dahil tüm kod GitHub'da denetlenebilir:"
+      },
+      "contact": {
+        "title": "Sorular",
+        "body": "Bir gizlilik sorunu bulursanız veya bir şeyi netleştirmek isterseniz, GitHub deposunda bir issue açın."
+      }
+    }
   }
 }
