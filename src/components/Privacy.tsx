@@ -1,12 +1,13 @@
 import { useTranslations } from 'next-intl'
-import { Github, Lock, EyeOff, UserX } from 'lucide-react'
+import { Lock, EyeOff, UserX } from 'lucide-react'
+import { GithubIcon } from '@/components/icons/GithubIcon'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 const POINTS = [
   { key: 'noCloud', Icon: Lock },
   { key: 'noTracking', Icon: EyeOff },
   { key: 'noAccount', Icon: UserX },
-  { key: 'openSource', Icon: Github }
+  { key: 'openSource', Icon: GithubIcon }
 ] as const
 
 export function Privacy(): React.JSX.Element {

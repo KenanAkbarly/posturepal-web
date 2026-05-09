@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { useLocale, useTranslations } from 'next-intl'
-import { Github, Sparkles } from 'lucide-react'
+import { Sparkles } from 'lucide-react'
+import { GithubIcon } from '@/components/icons/GithubIcon'
 
 export function Footer(): React.JSX.Element {
   const t = useTranslations('footer')
@@ -21,7 +22,7 @@ export function Footer(): React.JSX.Element {
             rel="noreferrer"
             className="flex items-center gap-1.5 transition-colors hover:text-foreground"
           >
-            <Github className="h-4 w-4" />
+            <GithubIcon className="h-4 w-4" />
             {t('github')}
           </Link>
           <Link href={privacyHref} className="transition-colors hover:text-foreground">
