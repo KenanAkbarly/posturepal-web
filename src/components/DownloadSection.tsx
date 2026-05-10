@@ -1,12 +1,11 @@
 import { useTranslations } from 'next-intl'
-import { Apple, ArrowRight, Construction } from 'lucide-react'
+import { Apple, ArrowRight } from 'lucide-react'
 
-// Direct asset URL — triggers download instead of routing to the GitHub UI.
-// `releases/latest/download/<filename>` resolves to the asset attached to
-// the latest published release. When the desktop bumps version, update the
-// asset filename here (and in Hero.tsx) accordingly.
-const RELEASE_URL =
-  'https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download/posturepal-desktop-0.0.4.dmg'
+const VERSION = '0.0.4'
+const REPO_RELEASES = 'https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download'
+
+const MAC_URL = `${REPO_RELEASES}/posturepal-desktop-${VERSION}.dmg`
+const WIN_URL = `${REPO_RELEASES}/posturepal-desktop-${VERSION}-setup.exe`
 
 export function DownloadSection(): React.JSX.Element {
   const t = useTranslations('download')
@@ -33,51 +32,26 @@ export function DownloadSection(): React.JSX.Element {
         </div>
 
         <div className="mx-auto mt-14 grid max-w-3xl gap-4 md:grid-cols-2 md:gap-5">
-          <a
-            href={RELEASE_URL}
-            rel="noreferrer"
-            className="group relative rounded-2xl border border-hairline bg-surface/60 p-8 transition-all duration-300 hover:border-sage-400/30 hover:bg-surface hover:shadow-[0_20px_60px_-20px_theme(colors.sage.400/0.15)]"
-          >
-            <Apple className="mb-6 h-10 w-10 text-ink" strokeWidth={1.5} />
-            <div className="flex items-baseline gap-2">
-              <h3 className="text-xl font-medium tracking-tight text-ink">{t('mac.title')}</h3>
-              <span className="font-mono text-xs text-ink-3">{t('mac.osChip')}</span>
-            </div>
-            <p className="mt-1 text-sm text-ink-2">{t('mac.subtitle')}</p>
-            <div className="mt-8 flex items-end justify-between">
-              <div className="font-mono text-xs leading-relaxed text-ink-3">
-                <div>{t('mac.version')}</div>
-                <div>{t('mac.size')}</div>
-              </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-medium text-sage-400">
-                {t('mac.cta')}
-                <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-              </span>
-            </div>
-          </a>
-
-          <div
-            aria-disabled
-            className="relative cursor-not-allowed rounded-2xl border border-hairline bg-surface/60 p-8 opacity-70"
-          >
-            <Construction className="mb-6 h-10 w-10 text-ink-2" strokeWidth={1.5} />
-            <div className="flex items-baseline gap-2">
-              <h3 className="text-xl font-medium tracking-tight text-ink">
-                {t('windows.title')}
-              </h3>
-              <span className="font-mono text-xs text-ink-3">{t('windows.osChip')}</span>
-            </div>
-            <p className="mt-1 text-sm text-ink-2">{t('windows.subtitle')}</p>
-            <div className="mt-8 flex items-end justify-between">
-              <div className="font-mono text-xs leading-relaxed text-ink-3">
-                <div>{t('windows.eta')}</div>
-                <div>{t('windows.note')}</div>
-              </div>
-              <span className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-3">
-                {t('windows.comingSoon')}
-              </span>
-            </div>
-          </div>
+          <PlatformCard
+            href={MAC_URL}
+            Icon={Apple}
+            title={t('mac.title')}
+            osChip={t('mac.osChip')}
+            subtitle={t('mac.subtitle')}
+            version={t('mac.version')}
+            size={t('mac.size')}
+            cta={t('mac.cta')}
+          />
+          <PlatformCard
+            href={WIN_URL}
+            Icon={WindowsIcon}
+            title={t('windows.title')}
+            osChip={t('windows.osChip')}
+            subtitle={t('windows.subtitle')}
+            version={t('windows.version')}
+            size={t('windows.size')}
+            cta={t('windows.cta')}
+          />
         </div>
 
         <div className="mx-auto mt-10 flex max-w-3xl flex-wrap items-center justify-center gap-x-6 gap-y-2 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-3">
@@ -89,5 +63,81 @@ export function DownloadSection(): React.JSX.Element {
         </div>
       </div>
     </section>
+  )
+}
+
+interface PlatformCardProps {
+  href: string
+  Icon: React.ComponentType<{ className?: string; strokeWidth?: number }>
+  title: string
+  osChip: string
+  subtitle: string
+  version: string
+  size: string
+  cta: string
+}
+
+function PlatformCard({
+  href,
+  Icon,
+  title,
+  osChip,
+  subtitle,
+  version,
+  size,
+  cta
+}: PlatformCardProps): React.JSX.Element {
+  return (
+    <a
+      href={href}
+      rel="noreferrer"
+      className="group relative rounded-2xl border border-hairline bg-surface/60 p-8 transition-all duration-300 hover:border-sage-400/30 hover:bg-surface hover:shadow-[0_20px_60px_-20px_theme(colors.sage.400/0.15)]"
+    >
+      <Icon className="mb-6 h-10 w-10 text-ink" strokeWidth={1.5} />
+      <div className="flex items-baseline gap-2">
+        <h3 className="text-xl font-medium tracking-tight text-ink">{title}</h3>
+        <span className="font-mono text-xs text-ink-3">{osChip}</span>
+      </div>
+      <p className="mt-1 text-sm text-ink-2">{subtitle}</p>
+      <div className="mt-8 flex items-end justify-between">
+        <div className="font-mono text-xs leading-relaxed text-ink-3">
+          <div>{version}</div>
+          <div>{size}</div>
+        </div>
+        <span className="inline-flex items-center gap-1.5 text-sm font-medium text-sage-400">
+          {cta}
+          <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
+        </span>
+      </div>
+    </a>
+  )
+}
+
+function WindowsIcon({
+  className,
+  strokeWidth = 1.5
+}: {
+  className?: string
+  strokeWidth?: number
+}): React.JSX.Element {
+  // lucide v1 doesn't ship a Windows-brand icon; inline a small four-quadrant
+  // square that reads as "Windows" without any trademarked logo.
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={strokeWidth}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className={className}
+    >
+      <path d="M3 5h8v8H3z" />
+      <path d="M13 5h8v8h-8z" />
+      <path d="M3 13h8v8H3z" />
+      <path d="M13 13h8v8h-8z" />
+    </svg>
   )
 }

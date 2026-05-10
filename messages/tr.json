@@ -122,9 +122,9 @@
       "title": "Windows",
       "osChip": "10+",
       "subtitle": "x64 NSIS yükleyici",
-      "eta": "v0.1 için planlandı",
-      "note": "Bildirim için repo'ya yıldız verin",
-      "comingSoon": "Yakında"
+      "version": "v0.0.4",
+      "size": "~170 MB · .exe",
+      "cta": "İndir"
     },
     "integrity": {
       "checksum": "Sürümlerde SHA-256 ile doğrulanabilir",

@@ -122,9 +122,9 @@
       "title": "Windows",
       "osChip": "10+",
       "subtitle": "x64 NSIS installer",
-      "eta": "Targeted for v0.1",
-      "note": "Star the repo to be notified",
-      "comingSoon": "Coming soon"
+      "version": "v0.0.4",
+      "size": "~170 MB · .exe",
+      "cta": "Download"
     },
     "integrity": {
       "checksum": "SHA-256 verifiable on release",
