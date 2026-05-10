@@ -17,23 +17,25 @@
     "trust3": "Open source"
   },
   "features": {
-    "title": "Everything you need, nothing you don't",
-    "subtitle": "Six things PosturePal does well — and a long list of things it deliberately doesn't.",
+    "eyebrow": "Features",
+    "titlePart1": "Built for posture,",
+    "titleEmphasis": "not for surveillance.",
+    "subtitle": "Six deliberate choices — privacy, accuracy, calm. The rest of the industry can keep its dark patterns.",
     "items": {
       "privacy": {
-        "title": "Privacy by design",
-        "description": "Camera frames never leave your computer. There is no cloud component to bypass."
+        "title": "Privacy first",
+        "description": "Camera frames never leave your computer. There is no cloud component to bypass — because there is no cloud."
       },
       "realtime": {
         "title": "Real-time detection",
-        "description": "MediaPipe Pose runs locally at 25-30 FPS, tracking your CVA, shoulder symmetry and spinal alignment frame-by-frame."
+        "description": "MediaPipe Pose runs locally at 25–30 FPS, tracking CVA, shoulder symmetry and spinal alignment frame by frame."
       },
       "personalized": {
         "title": "Personalized baseline",
         "description": "A 5-second calibration captures your individual normal posture, so alerts compare against you — not a generic textbook."
       },
       "clinical": {
-        "title": "Clinical safety net",
+        "title": "Clinical accuracy",
         "description": "Research-backed thresholds (Kim 2024b, Cortes 2024, Moreira 2022) catch breaches even if your baseline calibration was off."
       },
       "multiLanguage": {
@@ -41,8 +43,8 @@
         "description": "Use PosturePal in English or Türkçe. The UI adapts entirely; nothing is left untranslated."
       },
       "freeOpen": {
-        "title": "Free and open",
-        "description": "Free to download. Source code on GitHub. Audit the privacy promise yourself."
+        "title": "Free & open",
+        "description": "Free to download. Source on GitHub. Audit the privacy promise yourself, line by line."
       }
     }
   },

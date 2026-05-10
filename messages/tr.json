@@ -17,23 +17,25 @@
     "trust3": "Açık kaynak"
   },
   "features": {
-    "title": "İhtiyacınız olan her şey, fazlası değil",
-    "subtitle": "PosturePal'in iyi yaptığı altı şey — ve bilinçli olarak yapmadığı uzun bir liste.",
+    "eyebrow": "Özellikler",
+    "titlePart1": "Duruş için,",
+    "titleEmphasis": "gözetim için değil.",
+    "subtitle": "Altı bilinçli karar — gizlilik, doğruluk, sakinlik. Sektörün geri kalanı karanlık tasarım kalıplarıyla kalabilir.",
     "items": {
       "privacy": {
-        "title": "Tasarımdan gelen gizlilik",
-        "description": "Kamera kareleri bilgisayarınızdan asla çıkmaz. Atlatılacak bir bulut bileşeni yok."
+        "title": "Önce gizlilik",
+        "description": "Kamera kareleri bilgisayarınızdan asla çıkmaz. Atlatılacak bir bulut bileşeni yok — çünkü bulut diye bir şey yok."
       },
       "realtime": {
         "title": "Gerçek zamanlı algılama",
-        "description": "MediaPipe Pose yerel olarak 25-30 FPS'de çalışır; CVA'nızı, omuz simetrinizi ve omurga hizanızı kare kare takip eder."
+        "description": "MediaPipe Pose yerel olarak 25–30 FPS'de çalışır; CVA, omuz simetrisi ve omurga hizasını kare kare takip eder."
       },
       "personalized": {
         "title": "Kişisel taban",
         "description": "5 saniyelik bir kalibrasyon sizin normal duruşunuzu kaydeder, böylece uyarılar genel bir referansla değil sizinle karşılaştırılır."
       },
       "clinical": {
-        "title": "Klinik güvenlik ağı",
+        "title": "Klinik doğruluk",
         "description": "Araştırma destekli eşikler (Kim 2024b, Cortes 2024, Moreira 2022) kalibrasyonunuz hatalı olsa bile sınır aşımlarını yakalar."
       },
       "multiLanguage": {
@@ -42,7 +44,7 @@
       },
       "freeOpen": {
         "title": "Ücretsiz ve açık",
-        "description": "İndirmek ücretsiz. Kaynak kodu GitHub'da. Gizlilik vaadini kendiniz inceleyin."
+        "description": "İndirmek ücretsiz. Kaynak kodu GitHub'da. Gizlilik vaadini kendiniz inceleyin, satır satır."
       }
     }
   },
