@@ -2,12 +2,21 @@
 
 import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
-import { ArrowRight, ShieldCheck, EyeOff, Code2, Apple } from 'lucide-react'
+import { ArrowRight, ShieldCheck, EyeOff, Code2, Apple, Download } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { WindowsIcon } from '@/components/icons/WindowsIcon'
 import { fadeUp } from '@/lib/motion'
+import { useOS } from '@/hooks/useOS'
+
+const VERSION = '0.0.4'
+const REPO_RELEASES = 'https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download'
+const MAC_URL = `${REPO_RELEASES}/posturepal-desktop-${VERSION}.dmg`
+const WIN_URL = `${REPO_RELEASES}/posturepal-desktop-${VERSION}-setup.exe`
 
 export function Hero(): React.JSX.Element {
   const t = useTranslations('hero')
+  const os = useOS()
+  const cta = ctaForOS(os)
 
   return (
     <section className="relative isolate overflow-hidden bg-base">
@@ -72,12 +81,9 @@ export function Hero(): React.JSX.Element {
                 asChild
                 className="group h-12 rounded-lg bg-sage-400 px-6 font-medium tracking-tight text-base text-base hover:bg-sage-500"
               >
-                <a
-                  href="https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download/posturepal-desktop-0.0.4.dmg"
-                  rel="noreferrer"
-                >
-                  <Apple className="mr-2 h-4 w-4" strokeWidth={1.8} />
-                  {t('ctaPrimary')}
+                <a href={cta.href} rel="noreferrer">
+                  <cta.Icon className="mr-2 h-4 w-4" strokeWidth={1.8} />
+                  {t(cta.labelKey)}
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </a>
               </Button>
@@ -128,6 +134,24 @@ export function Hero(): React.JSX.Element {
       </div>
     </section>
   )
+}
+
+interface CtaConfig {
+  href: string
+  labelKey: 'ctaPrimary' | 'ctaPrimaryWin' | 'ctaPrimaryGeneric'
+  Icon: React.ComponentType<{ className?: string; strokeWidth?: number }>
+}
+
+function ctaForOS(os: ReturnType<typeof useOS>): CtaConfig {
+  if (os === 'win') {
+    return { href: WIN_URL, labelKey: 'ctaPrimaryWin', Icon: WindowsIcon }
+  }
+  if (os === 'mac' || os === 'unknown') {
+    // Default to macOS during SSR / first render so the rendered HTML
+    // is stable; macOS shipped first and is the most common visitor.
+    return { href: MAC_URL, labelKey: 'ctaPrimary', Icon: Apple }
+  }
+  return { href: '#download', labelKey: 'ctaPrimaryGeneric', Icon: Download }
 }
 
 function MonitorCard(): React.JSX.Element {

@@ -13,6 +13,8 @@
     "headlineEmphasis": "watched only by you",
     "sub": "Real-time posture monitoring that runs entirely on your machine. No camera stream ever leaves your computer. No account, no cloud, no compromise.",
     "ctaPrimary": "Download for macOS",
+    "ctaPrimaryWin": "Download for Windows",
+    "ctaPrimaryGeneric": "Download",
     "ctaSecondary": "How it works",
     "trust1": "No cloud",
     "trust2": "No tracking",
