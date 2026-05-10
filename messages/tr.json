@@ -114,7 +114,7 @@
       "title": "macOS",
       "osChip": "11.0+",
       "subtitle": "Apple Silicon · arm64",
-      "version": "v0.0.1",
+      "version": "v0.0.2",
       "size": "168 MB · .dmg",
       "cta": "İndir"
     },
@@ -154,7 +154,7 @@
       }
     },
     "build": {
-      "version": "v0.0.1",
+      "version": "v0.0.2",
       "builtOn": "Derlendi 2026-05-09",
       "arch": "darwin · arm64",
       "repo": "github.com/KenanAkbarly"

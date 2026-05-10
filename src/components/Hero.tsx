@@ -73,7 +73,7 @@ export function Hero(): React.JSX.Element {
                 className="group h-12 rounded-lg bg-sage-400 px-6 font-medium tracking-tight text-base text-base hover:bg-sage-500"
               >
                 <a
-                  href="https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download/posturepal-desktop-0.0.1.dmg"
+                  href="https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download/posturepal-desktop-0.0.2.dmg"
                   rel="noreferrer"
                 >
                   <Apple className="mr-2 h-4 w-4" strokeWidth={1.8} />

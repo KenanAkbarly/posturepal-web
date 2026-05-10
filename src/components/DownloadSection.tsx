@@ -6,7 +6,7 @@ import { Apple, ArrowRight, Construction } from 'lucide-react'
 // the latest published release. When the desktop bumps version, update the
 // asset filename here (and in Hero.tsx) accordingly.
 const RELEASE_URL =
-  'https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download/posturepal-desktop-0.0.1.dmg'
+  'https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download/posturepal-desktop-0.0.2.dmg'
 
 export function DownloadSection(): React.JSX.Element {
   const t = useTranslations('download')
