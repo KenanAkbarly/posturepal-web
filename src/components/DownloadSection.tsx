@@ -1,7 +1,12 @@
 import { useTranslations } from 'next-intl'
 import { Apple, ArrowRight, Construction } from 'lucide-react'
 
-const RELEASE_URL = 'https://github.com/KenanAkbarly/posturepal-desktop/releases/latest'
+// Direct asset URL — triggers download instead of routing to the GitHub UI.
+// `releases/latest/download/<filename>` resolves to the asset attached to
+// the latest published release. When the desktop bumps version, update the
+// asset filename here (and in Hero.tsx) accordingly.
+const RELEASE_URL =
+  'https://github.com/KenanAkbarly/posturepal-desktop/releases/latest/download/posturepal-desktop-0.0.1.dmg'
 
 export function DownloadSection(): React.JSX.Element {
   const t = useTranslations('download')
@@ -30,7 +35,6 @@ export function DownloadSection(): React.JSX.Element {
         <div className="mx-auto mt-14 grid max-w-3xl gap-4 md:grid-cols-2 md:gap-5">
           <a
             href={RELEASE_URL}
-            target="_blank"
             rel="noreferrer"
             className="group relative rounded-2xl border border-hairline bg-surface/60 p-8 transition-all duration-300 hover:border-sage-400/30 hover:bg-surface hover:shadow-[0_20px_60px_-20px_theme(colors.sage.400/0.15)]"
           >
