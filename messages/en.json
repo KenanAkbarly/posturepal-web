@@ -80,20 +80,27 @@
     }
   },
   "requirements": {
-    "title": "System requirements",
-    "subtitle": "Modest. PosturePal runs on the laptop you already have.",
+    "eyebrow": "Requirements",
+    "titlePart1": "Runs on what",
+    "titleEmphasis": "you already own.",
+    "subtitle": "Modest by design. No GPU required, no external sensor, no cloud quota.",
     "common": {
-      "ram": "8 GB RAM",
-      "webcam": "Built-in or USB webcam"
+      "osLabel": "OS",
+      "ramLabel": "Memory",
+      "cameraLabel": "Camera",
+      "ram": "8 GB",
+      "webcam": "Any webcam"
     },
     "mac": {
       "title": "macOS",
-      "os": "macOS 11 (Big Sur) or newer"
+      "status": "Available",
+      "os": "11+ (Big Sur)"
     },
     "windows": {
       "title": "Windows",
-      "os": "Windows 10 or newer (planned)",
-      "comingSoon": "Coming soon"
+      "status": "In progress",
+      "os": "10+ (planned)",
+      "comingSoon": "Coming soon · star the repo to be notified"
     }
   },
   "download": {

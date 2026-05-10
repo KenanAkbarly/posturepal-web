@@ -80,20 +80,27 @@
     }
   },
   "requirements": {
-    "title": "Sistem gereksinimleri",
-    "subtitle": "Mütevazı. PosturePal halihazırda kullandığınız laptopta çalışır.",
+    "eyebrow": "Gereksinimler",
+    "titlePart1": "Halihazırda",
+    "titleEmphasis": "sahip olduğunuz cihazda çalışır.",
+    "subtitle": "Tasarımdan gelen mütevazılık. GPU gerekmez, harici sensör yok, bulut kotası yok.",
     "common": {
-      "ram": "8 GB RAM",
-      "webcam": "Dahili veya USB webcam"
+      "osLabel": "OS",
+      "ramLabel": "Bellek",
+      "cameraLabel": "Kamera",
+      "ram": "8 GB",
+      "webcam": "Herhangi bir webcam"
     },
     "mac": {
       "title": "macOS",
-      "os": "macOS 11 (Big Sur) veya daha yeni"
+      "status": "Hazır",
+      "os": "11+ (Big Sur)"
     },
     "windows": {
       "title": "Windows",
-      "os": "Windows 10 veya daha yeni (planlandı)",
-      "comingSoon": "Yakında"
+      "status": "Geliştirilme aşamasında",
+      "os": "10+ (planlandı)",
+      "comingSoon": "Yakında · bildirim için repo'ya yıldız verin"
     }
   },
   "download": {

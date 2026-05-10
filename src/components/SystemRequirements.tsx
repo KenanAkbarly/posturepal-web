@@ -1,59 +1,73 @@
 import { useTranslations } from 'next-intl'
-import { Apple, Cpu, MemoryStick, Monitor, Video } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
-import { Separator } from '@/components/ui/separator'
+import { Apple, Monitor } from 'lucide-react'
 
 export function SystemRequirements(): React.JSX.Element {
   const t = useTranslations('requirements')
 
   return (
-    <section className="container py-16 md:py-24">
+    <section className="container mx-auto px-6 py-24 md:py-32">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight md:text-4xl">{t('title')}</h2>
-        <p className="mt-3 text-muted-foreground">{t('subtitle')}</p>
+        <span className="font-mono text-xs uppercase tracking-[0.2em] text-sage-400">
+          {t('eyebrow')}
+        </span>
+        <h2 className="mt-4 text-3xl md:text-5xl font-medium tracking-[-0.02em] leading-[1.05] text-ink">
+          {t('titlePart1')}{' '}
+          <span className="font-serif italic font-normal text-ink-2">
+            {t('titleEmphasis')}
+          </span>
+        </h2>
+        <p className="mt-5 text-[15px] md:text-base leading-relaxed text-ink-2">
+          {t('subtitle')}
+        </p>
       </div>
-      <div className="mx-auto mt-10 grid max-w-3xl gap-5 md:grid-cols-2">
-        <Card>
-          <CardHeader className="flex-row items-center gap-3 space-y-0">
-            <Apple className="h-5 w-5 text-foreground" />
-            <CardTitle className="text-base">{t('mac.title')}</CardTitle>
-          </CardHeader>
-          <Separator />
-          <CardContent className="flex flex-col gap-3 pt-4 text-sm">
-            <Row Icon={Cpu} label={t('mac.os')} />
-            <Row Icon={MemoryStick} label={t('common.ram')} />
-            <Row Icon={Video} label={t('common.webcam')} />
-          </CardContent>
-        </Card>
-        <Card className="opacity-70">
-          <CardHeader className="flex-row items-center gap-3 space-y-0">
-            <Monitor className="h-5 w-5 text-foreground" />
-            <CardTitle className="text-base">{t('windows.title')}</CardTitle>
-          </CardHeader>
-          <Separator />
-          <CardContent className="flex flex-col gap-3 pt-4 text-sm">
-            <Row Icon={Cpu} label={t('windows.os')} />
-            <Row Icon={MemoryStick} label={t('common.ram')} />
-            <Row Icon={Video} label={t('common.webcam')} />
-            <p className="mt-2 text-xs italic text-muted-foreground">{t('windows.comingSoon')}</p>
-          </CardContent>
-        </Card>
+
+      <div className="mx-auto mt-14 grid max-w-3xl gap-4 md:grid-cols-2 md:gap-5">
+        <article className="rounded-xl border border-hairline bg-surface/40 p-7">
+          <div className="flex items-center justify-between">
+            <Apple className="h-7 w-7 text-ink" strokeWidth={1.5} />
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-3">
+              {t('mac.status')}
+            </span>
+          </div>
+          <h3 className="mt-6 text-lg md:text-xl font-medium tracking-tight text-ink">
+            {t('mac.title')}
+          </h3>
+          <dl className="mt-5 grid grid-cols-3 gap-4">
+            <SpecRow label={t('common.osLabel')} value={t('mac.os')} />
+            <SpecRow label={t('common.ramLabel')} value={t('common.ram')} />
+            <SpecRow label={t('common.cameraLabel')} value={t('common.webcam')} />
+          </dl>
+        </article>
+
+        <article className="rounded-xl border border-hairline bg-surface/40 p-7 opacity-70">
+          <div className="flex items-center justify-between">
+            <Monitor className="h-7 w-7 text-ink-2" strokeWidth={1.5} />
+            <span className="font-mono text-[10px] uppercase tracking-[0.18em] text-ink-3">
+              {t('windows.status')}
+            </span>
+          </div>
+          <h3 className="mt-6 text-lg md:text-xl font-medium tracking-tight text-ink">
+            {t('windows.title')}
+          </h3>
+          <dl className="mt-5 grid grid-cols-3 gap-4">
+            <SpecRow label={t('common.osLabel')} value={t('windows.os')} />
+            <SpecRow label={t('common.ramLabel')} value={t('common.ram')} />
+            <SpecRow label={t('common.cameraLabel')} value={t('common.webcam')} />
+          </dl>
+          <p className="mt-5 font-mono text-[10px] uppercase tracking-[0.16em] text-ink-3">
+            {t('windows.comingSoon')}
+          </p>
+        </article>
       </div>
     </section>
   )
 }
 
-function Row({
-  Icon,
-  label
-}: {
-  Icon: React.ComponentType<{ className?: string }>
-  label: string
-}): React.JSX.Element {
+function SpecRow({ label, value }: { label: string; value: string }): React.JSX.Element {
   return (
-    <div className="flex items-center gap-2.5 text-muted-foreground">
-      <Icon className="h-4 w-4 flex-shrink-0" />
-      <span>{label}</span>
+    <div>
+      <dt className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink-3">{label}</dt>
+      <dd className="mt-1 text-sm text-ink">{value}</dd>
     </div>
   )
 }
