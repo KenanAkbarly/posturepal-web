@@ -13,6 +13,8 @@
     "headlineEmphasis": "yalnızca sizin gözünüzde",
     "sub": "Tamamen kendi bilgisayarınızda çalışan gerçek zamanlı duruş takibi. Kamera akışı asla cihazınızdan çıkmaz. Hesap yok, bulut yok, taviz yok.",
     "ctaPrimary": "macOS için indir",
+    "ctaPrimaryWin": "Windows için indir",
+    "ctaPrimaryGeneric": "İndir",
     "ctaSecondary": "Nasıl çalışır",
     "trust1": "Bulut yok",
     "trust2": "İzleme yok",
