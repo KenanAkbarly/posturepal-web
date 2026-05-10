@@ -163,10 +163,12 @@
     "careTagline": "Made with care, not analytics."
   },
   "privacyPage": {
-    "back": "Back to home",
-    "title": "Privacy",
-    "lede": "PosturePal is built around a single rule: nothing about you leaves your computer. This page explains exactly what that means.",
-    "updated": "Last updated: May 2026",
+    "back": "Back",
+    "eyebrow": "Privacy promise",
+    "titlePart1": "Nothing about you",
+    "titleEmphasis": "leaves your computer.",
+    "lede": "PosturePal is built around a single rule. This page explains exactly what that means — line by line.",
+    "updated": "Last updated · May 2026",
     "sections": {
       "dataCollection": {
         "title": "What data we collect",

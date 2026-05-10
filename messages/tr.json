@@ -163,10 +163,12 @@
     "careTagline": "Özenle yapıldı, analitikle değil."
   },
   "privacyPage": {
-    "back": "Ana sayfaya dön",
-    "title": "Gizlilik",
-    "lede": "PosturePal tek bir kural üzerine kuruludur: sizinle ilgili hiçbir şey bilgisayarınızdan çıkmaz. Bu sayfa bunun tam olarak ne anlama geldiğini açıklar.",
-    "updated": "Son güncelleme: Mayıs 2026",
+    "back": "Geri",
+    "eyebrow": "Gizlilik vaadi",
+    "titlePart1": "Sizinle ilgili hiçbir şey",
+    "titleEmphasis": "bilgisayarınızdan çıkmaz.",
+    "lede": "PosturePal tek bir kural üzerine kuruludur. Bu sayfa bunun tam olarak ne anlama geldiğini açıklar — satır satır.",
+    "updated": "Son güncelleme · Mayıs 2026",
     "sections": {
       "dataCollection": {
         "title": "Hangi verileri topluyoruz",

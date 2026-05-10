@@ -5,9 +5,9 @@ import { ChevronLeft } from 'lucide-react'
 import { GithubIcon } from '@/components/icons/GithubIcon'
 import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
-import { Button } from '@/components/ui/button'
-import { Separator } from '@/components/ui/separator'
 import { Link } from '@/i18n/navigation'
+
+const REPO = 'https://github.com/KenanAkbarly/posturepal-desktop'
 
 export const metadata: Metadata = {
   title: 'Privacy — PosturePal',
@@ -27,7 +27,7 @@ export default async function PrivacyPage({
   return (
     <>
       <Header />
-      <main className="container max-w-3xl py-12 md:py-20">
+      <main className="container mx-auto max-w-3xl px-6 py-16 md:py-24">
         <PrivacyContent />
       </main>
       <Footer />
@@ -38,19 +38,33 @@ export default async function PrivacyPage({
 function PrivacyContent(): React.JSX.Element {
   const t = useTranslations('privacyPage')
   return (
-    <article className="prose prose-slate max-w-none dark:prose-invert">
-      <Button asChild variant="ghost" size="sm" className="mb-6 -ml-3">
-        <Link href="/">
-          <ChevronLeft className="mr-1 h-4 w-4" /> {t('back')}
-        </Link>
-      </Button>
-      <h1 className="text-4xl font-bold tracking-tight">{t('title')}</h1>
-      <p className="mt-3 text-lg text-muted-foreground">{t('lede')}</p>
-      <p className="mt-2 text-xs text-muted-foreground">{t('updated')}</p>
+    <article className="text-ink">
+      <Link
+        href="/"
+        className="inline-flex items-center gap-1 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3 transition-colors hover:text-ink"
+      >
+        <ChevronLeft className="h-3.5 w-3.5" strokeWidth={1.5} />
+        {t('back')}
+      </Link>
 
-      <Separator className="my-8" />
+      <span className="mt-12 block font-mono text-xs uppercase tracking-[0.2em] text-sage-400">
+        {t('eyebrow')}
+      </span>
+      <h1 className="mt-3 text-4xl md:text-5xl font-medium tracking-[-0.02em] leading-[1.05] text-ink">
+        {t('titlePart1')}{' '}
+        <span className="font-serif italic font-normal text-ink-2">{t('titleEmphasis')}</span>
+      </h1>
+      <p className="mt-5 max-w-prose text-lg leading-relaxed text-ink-2">{t('lede')}</p>
+      <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.18em] text-ink-3">
+        {t('updated')}
+      </p>
 
-      <Section title={t('sections.dataCollection.title')}>
+      <div
+        aria-hidden
+        className="my-12 h-px bg-gradient-to-r from-transparent via-hairline to-transparent"
+      />
+
+      <Section eyebrow="01" title={t('sections.dataCollection.title')}>
         <p>{t('sections.dataCollection.body')}</p>
         <ul>
           <li>{t('sections.dataCollection.point1')}</li>
@@ -59,27 +73,27 @@ function PrivacyContent(): React.JSX.Element {
         </ul>
       </Section>
 
-      <Section title={t('sections.permissions.title')}>
+      <Section eyebrow="02" title={t('sections.permissions.title')}>
         <p>{t('sections.permissions.camera.body')}</p>
         <p>{t('sections.permissions.notifications.body')}</p>
       </Section>
 
-      <Section title={t('sections.localStorage.title')}>
+      <Section eyebrow="03" title={t('sections.localStorage.title')}>
         <p>{t('sections.localStorage.body')}</p>
       </Section>
 
-      <Section title={t('sections.noTelemetry.title')}>
+      <Section eyebrow="04" title={t('sections.noTelemetry.title')}>
         <p>{t('sections.noTelemetry.body')}</p>
       </Section>
 
-      <Section title={t('sections.openSource.title')}>
+      <Section eyebrow="05" title={t('sections.openSource.title')}>
         <p>{t('sections.openSource.body')}</p>
         <p>
           <a
-            href="https://github.com/KenanAkbarly/posturepal-desktop"
+            href={REPO}
             target="_blank"
             rel="noreferrer"
-            className="inline-flex items-center gap-1.5 underline"
+            className="inline-flex items-center gap-1.5 text-sage-400 transition-colors hover:text-sage-200"
           >
             <GithubIcon className="h-4 w-4" />
             github.com/KenanAkbarly/posturepal-desktop
@@ -87,7 +101,7 @@ function PrivacyContent(): React.JSX.Element {
         </p>
       </Section>
 
-      <Section title={t('sections.contact.title')}>
+      <Section eyebrow="06" title={t('sections.contact.title')}>
         <p>{t('sections.contact.body')}</p>
       </Section>
     </article>
@@ -95,17 +109,26 @@ function PrivacyContent(): React.JSX.Element {
 }
 
 function Section({
+  eyebrow,
   title,
   children
 }: {
+  eyebrow: string
   title: string
   children: React.ReactNode
 }): React.JSX.Element {
   return (
-    <section className="my-8">
-      <h2 className="text-2xl font-semibold tracking-tight">{title}</h2>
-      <div className="mt-3 leading-relaxed text-muted-foreground [&>p]:my-3 [&>ul]:my-3 [&>ul]:list-disc [&>ul]:pl-6 [&_a]:underline">
-        {children}
+    <section className="my-12 grid gap-3 md:grid-cols-[80px_1fr]">
+      <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-ink-3">
+        {eyebrow}
+      </span>
+      <div>
+        <h2 className="text-2xl md:text-3xl font-medium tracking-[-0.01em] text-ink">
+          {title}
+        </h2>
+        <div className="mt-4 leading-relaxed text-ink-2 [&>p]:my-3 [&>ul]:my-3 [&>ul]:list-disc [&>ul]:pl-6 [&_a]:underline">
+          {children}
+        </div>
       </div>
     </section>
   )
