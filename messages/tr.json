@@ -69,25 +69,14 @@
     }
   },
   "privacy": {
-    "title": "Kameranız bilgisayarınızdan asla çıkmaz",
-    "subtitle": "Sunucumuz yok. Sızdıracak, satacak veya kimseye verecek hiçbir şeyimiz yok.",
-    "points": {
-      "noCloud": {
-        "title": "Bulut yok",
-        "description": "Duruş algılama, uygulamanın içinde WebAssembly'de çalışır. Sunucuya kare veya duruş verisi gönderilmez — sunucu yok."
-      },
-      "noTracking": {
-        "title": "Takip yok",
-        "description": "Analitik yok, telemetri yok, üçüncü taraf script yok. Bu sitede yok. Uygulamada yok."
-      },
-      "noAccount": {
-        "title": "Hesap yok",
-        "description": "E-posta, isim ya da başka bir şey istemiyoruz. Kur ve kullan."
-      },
-      "openSource": {
-        "title": "İncelenebilir",
-        "description": "Kaynak kodu GitHub'da. Okuyun. Karşılaştırın. İsterseniz kendiniz derleyin."
-      }
+    "eyebrow": "Gizlilik",
+    "manifestPart1": "Kameranız bilgisayarınızdan asla çıkmaz.",
+    "manifestEmphasis": "Sızdırılacak sunucu, ihlal edilecek hesap, güvenilecek bulut yok.",
+    "evidence": {
+      "networkCalls": { "label": "Ağ çağrısı", "value": "0" },
+      "telemetry": { "label": "Telemetri", "value": "yok" },
+      "account": { "label": "Hesap", "value": "yok" },
+      "source": { "label": "Kaynak", "value": "açık" }
     }
   },
   "requirements": {

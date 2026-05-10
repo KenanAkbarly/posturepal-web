@@ -69,25 +69,14 @@
     }
   },
   "privacy": {
-    "title": "Your camera never leaves your computer",
-    "subtitle": "We don't have a server. There's nothing for us to leak, sell, or hand over to anyone.",
-    "points": {
-      "noCloud": {
-        "title": "No cloud",
-        "description": "Pose detection runs in WebAssembly inside the app. No frames or pose data are sent to a server — there isn't one."
-      },
-      "noTracking": {
-        "title": "No tracking",
-        "description": "No analytics, no telemetry, no third-party scripts. Not on this site. Not in the app."
-      },
-      "noAccount": {
-        "title": "No account",
-        "description": "We don't ask for an email, a name, or anything else. Install and use."
-      },
-      "openSource": {
-        "title": "Inspectable",
-        "description": "The source code is on GitHub. Read it. Diff it. Build it yourself if you want."
-      }
+    "eyebrow": "Privacy",
+    "manifestPart1": "Your camera never leaves your computer.",
+    "manifestEmphasis": "There is no server to leak, no account to breach, no cloud to trust.",
+    "evidence": {
+      "networkCalls": { "label": "Network calls", "value": "0" },
+      "telemetry": { "label": "Telemetry", "value": "none" },
+      "account": { "label": "Account", "value": "no" },
+      "source": { "label": "Source", "value": "open" }
     }
   },
   "requirements": {
