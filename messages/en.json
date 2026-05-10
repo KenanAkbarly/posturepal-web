@@ -131,9 +131,34 @@
     }
   },
   "footer": {
-    "copyright": "© {year} PosturePal — Academic project by Kanan Akbarli",
-    "github": "GitHub",
-    "privacyLink": "Privacy"
+    "tagline": "Privacy-first posture monitoring. No cloud, no account, no compromise.",
+    "groups": {
+      "product": {
+        "title": "Product",
+        "features": "Features",
+        "howItWorks": "How it works",
+        "download": "Download"
+      },
+      "privacy": {
+        "title": "Privacy",
+        "promise": "Privacy promise",
+        "source": "Source code",
+        "license": "License"
+      },
+      "resources": {
+        "title": "Resources",
+        "issues": "Issues",
+        "releases": "Releases"
+      }
+    },
+    "build": {
+      "version": "v0.0.1",
+      "builtOn": "Built 2026-05-09",
+      "arch": "darwin · arm64",
+      "repo": "github.com/KenanAkbarly"
+    },
+    "copyright": "© {year} PosturePal — Kanan Akbarli",
+    "careTagline": "Made with care, not analytics."
   },
   "privacyPage": {
     "back": "Back to home",

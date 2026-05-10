@@ -131,9 +131,34 @@
     }
   },
   "footer": {
-    "copyright": "© {year} PosturePal — Kanan Akbarli'nin akademik projesi",
-    "github": "GitHub",
-    "privacyLink": "Gizlilik"
+    "tagline": "Önce gizlilik prensibiyle duruş takibi. Bulut yok, hesap yok, taviz yok.",
+    "groups": {
+      "product": {
+        "title": "Ürün",
+        "features": "Özellikler",
+        "howItWorks": "Nasıl çalışır",
+        "download": "İndir"
+      },
+      "privacy": {
+        "title": "Gizlilik",
+        "promise": "Gizlilik vaadi",
+        "source": "Kaynak kodu",
+        "license": "Lisans"
+      },
+      "resources": {
+        "title": "Kaynaklar",
+        "issues": "Sorunlar",
+        "releases": "Sürümler"
+      }
+    },
+    "build": {
+      "version": "v0.0.1",
+      "builtOn": "Derlendi 2026-05-09",
+      "arch": "darwin · arm64",
+      "repo": "github.com/KenanAkbarly"
+    },
+    "copyright": "© {year} PosturePal — Kanan Akbarli",
+    "careTagline": "Özenle yapıldı, analitikle değil."
   },
   "privacyPage": {
     "back": "Ana sayfaya dön",
