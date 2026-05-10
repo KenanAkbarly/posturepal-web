@@ -6,18 +6,15 @@
     "download": "İndir"
   },
   "hero": {
-    "badge": "Önce gizlilik",
-    "headline": "Duruşunuzu yalnızca siz görün",
-    "subheadline": "Kameranızdan gerçek zamanlı duruş koçluğu. Her kare sizin bilgisayarınızda işlenir — hiçbir şey hiçbir zaman yüklenmez.",
-    "downloadMac": "macOS için indir",
-    "downloadWin": "Windows — yakında",
-    "disclaimer": "Ücretsiz. Hesap yok. Takip yok.",
-    "previewBadge": "Önizleme",
-    "previewMetric": {
-      "cva": "CVA",
-      "asymmetry": "Asimetri",
-      "alignment": "Hizalama"
-    }
+    "badge": "Gizlilik öncelikli · v1.0",
+    "headlinePart1": "Duruşunuz,",
+    "headlineEmphasis": "yalnızca sizin gözünüzde",
+    "sub": "Tamamen kendi bilgisayarınızda çalışan gerçek zamanlı duruş takibi. Kamera akışı asla cihazınızdan çıkmaz. Hesap yok, bulut yok, taviz yok.",
+    "ctaPrimary": "macOS için indir",
+    "ctaSecondary": "Nasıl çalışır",
+    "trust1": "Bulut yok",
+    "trust2": "İzleme yok",
+    "trust3": "Açık kaynak"
   },
   "features": {
     "title": "İhtiyacınız olan her şey, fazlası değil",

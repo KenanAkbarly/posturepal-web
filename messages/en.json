@@ -6,18 +6,15 @@
     "download": "Download"
   },
   "hero": {
-    "badge": "Privacy-first",
-    "headline": "Your posture, watched only by you",
-    "subheadline": "Real-time posture coaching from your webcam. Every frame is processed on your computer — nothing is uploaded, ever.",
-    "downloadMac": "Download for macOS",
-    "downloadWin": "Windows — coming soon",
-    "disclaimer": "Free. No account. No tracking.",
-    "previewBadge": "Preview",
-    "previewMetric": {
-      "cva": "CVA",
-      "asymmetry": "Asymmetry",
-      "alignment": "Alignment"
-    }
+    "badge": "Privacy-first · v1.0",
+    "headlinePart1": "Your posture,",
+    "headlineEmphasis": "watched only by you",
+    "sub": "Real-time posture monitoring that runs entirely on your machine. No camera stream ever leaves your computer. No account, no cloud, no compromise.",
+    "ctaPrimary": "Download for macOS",
+    "ctaSecondary": "How it works",
+    "trust1": "No cloud",
+    "trust2": "No tracking",
+    "trust3": "Open source"
   },
   "features": {
     "title": "Everything you need, nothing you don't",
