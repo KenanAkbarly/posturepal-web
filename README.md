@@ -1,8 +1,10 @@
 # PosturePal Web
 
+> **Live:** [posturepal-web-ochre.vercel.app](https://posturepal-web-ochre.vercel.app/)
+
 Marketing site for [PosturePal](https://github.com/KenanAkbarly/posturepal-desktop) — the privacy-first, real-time desktop posture monitor. The site introduces the product, explains the privacy model, and links to the GitHub release for download.
 
-Built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind 3**, **shadcn/ui**, **next-intl** (EN + TR), and **Lucide** icons. Pure static — no backend, no analytics, no tracking.
+Built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind 3**, **shadcn/ui**, **next-intl** (EN + TR), **Framer Motion**, and **Lucide** icons. Pure static — no backend, no analytics, no tracking.
 
 ## Getting started
 
@@ -65,8 +67,11 @@ That's it. The release URL never changes (`/releases/latest` always redirects to
 
 ## Deploying to Vercel
 
+Live deployment: **[posturepal-web-ochre.vercel.app](https://posturepal-web-ochre.vercel.app/)**
+
 ```bash
-npx vercel
+npx vercel login          # one-time, browser-based
+npx vercel --prod         # deploy
 ```
 
 Vercel auto-detects Next.js and deploys with zero config. The `i18n` middleware runs on Vercel's edge runtime by default.
