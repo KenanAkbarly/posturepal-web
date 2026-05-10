@@ -3,7 +3,9 @@
     "features": "Özellikler",
     "howItWorks": "Nasıl çalışır",
     "privacy": "Gizlilik",
-    "download": "İndir"
+    "download": "İndir",
+    "menu": "Menü",
+    "close": "Kapat"
   },
   "hero": {
     "badge": "Gizlilik öncelikli · v1.0",

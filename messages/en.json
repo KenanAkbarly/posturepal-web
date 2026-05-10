@@ -3,7 +3,9 @@
     "features": "Features",
     "howItWorks": "How it works",
     "privacy": "Privacy",
-    "download": "Download"
+    "download": "Download",
+    "menu": "Menu",
+    "close": "Close"
   },
   "hero": {
     "badge": "Privacy-first · v1.0",
