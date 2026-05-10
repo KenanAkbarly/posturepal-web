@@ -1,12 +1,10 @@
-import Link from 'next/link'
-import { useLocale, useTranslations } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { Sparkles } from 'lucide-react'
 import { GithubIcon } from '@/components/icons/GithubIcon'
+import { Link } from '@/i18n/navigation'
 
 export function Footer(): React.JSX.Element {
   const t = useTranslations('footer')
-  const locale = useLocale()
-  const privacyHref = locale === 'en' ? '/privacy' : `/${locale}/privacy`
 
   return (
     <footer className="border-t">
@@ -16,7 +14,7 @@ export function Footer(): React.JSX.Element {
           <span>{t('copyright', { year: new Date().getFullYear() })}</span>
         </div>
         <div className="flex items-center gap-6 text-muted-foreground">
-          <Link
+          <a
             href="https://github.com/KenanAkbarly/posturepal-desktop"
             target="_blank"
             rel="noreferrer"
@@ -24,8 +22,8 @@ export function Footer(): React.JSX.Element {
           >
             <GithubIcon className="h-4 w-4" />
             {t('github')}
-          </Link>
-          <Link href={privacyHref} className="transition-colors hover:text-foreground">
+          </a>
+          <Link href="/privacy" className="transition-colors hover:text-foreground">
             {t('privacyLink')}
           </Link>
         </div>

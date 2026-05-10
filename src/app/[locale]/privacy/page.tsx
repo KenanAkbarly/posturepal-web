@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import Link from 'next/link'
 import { setRequestLocale } from 'next-intl/server'
 import { useTranslations } from 'next-intl'
 import { ChevronLeft } from 'lucide-react'
@@ -8,6 +7,7 @@ import { Header } from '@/components/Header'
 import { Footer } from '@/components/Footer'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import { Link } from '@/i18n/navigation'
 
 export const metadata: Metadata = {
   title: 'Privacy — PosturePal',
@@ -75,7 +75,7 @@ function PrivacyContent(): React.JSX.Element {
       <Section title={t('sections.openSource.title')}>
         <p>{t('sections.openSource.body')}</p>
         <p>
-          <Link
+          <a
             href="https://github.com/KenanAkbarly/posturepal-desktop"
             target="_blank"
             rel="noreferrer"
@@ -83,7 +83,7 @@ function PrivacyContent(): React.JSX.Element {
           >
             <GithubIcon className="h-4 w-4" />
             github.com/KenanAkbarly/posturepal-desktop
-          </Link>
+          </a>
         </p>
       </Section>
 
