@@ -104,20 +104,30 @@
     }
   },
   "download": {
-    "title": "PosturePal'i edinin",
-    "subtitle": "Ücretsiz. macOS şimdi mevcut. Windows yakında.",
+    "eyebrow": "İndir",
+    "titlePart1": "Platformunuzu seçin.",
+    "titleEmphasis": "Beş saniyede kurulum.",
+    "subtitle": "Ücretsiz. macOS bugün. Windows yakında.",
     "mac": {
       "title": "macOS",
+      "osChip": "11.0+",
+      "subtitle": "Apple Silicon · arm64",
       "version": "v0.0.1",
-      "size": "~168 MB · Apple Silicon (arm64)",
-      "cta": ".dmg indir",
-      "note": "İlk açılışta .dmg dosyasına sağ tıklayın → Aç (akademik prototip, imzasız)."
+      "size": "168 MB · .dmg",
+      "cta": "İndir"
     },
     "windows": {
       "title": "Windows",
-      "comingSoon": "Yakında",
-      "eta": "Bir sonraki sürüm için planlandı",
-      "note": "Bildirim almak için GitHub deposuna yıldız verin."
+      "osChip": "10+",
+      "subtitle": "x64 NSIS yükleyici",
+      "eta": "v0.1 için planlandı",
+      "note": "Bildirim için repo'ya yıldız verin",
+      "comingSoon": "Yakında"
+    },
+    "integrity": {
+      "checksum": "Sürümlerde SHA-256 ile doğrulanabilir",
+      "unsigned": "İmzasız · akademik prototip",
+      "openSource": "Kaynak GitHub'da"
     }
   },
   "footer": {

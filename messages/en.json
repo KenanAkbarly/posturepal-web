@@ -104,20 +104,30 @@
     }
   },
   "download": {
-    "title": "Get PosturePal",
-    "subtitle": "Free. macOS available now. Windows coming soon.",
+    "eyebrow": "Download",
+    "titlePart1": "Pick your platform.",
+    "titleEmphasis": "Five seconds to install.",
+    "subtitle": "Free. macOS today. Windows soon.",
     "mac": {
       "title": "macOS",
+      "osChip": "11.0+",
+      "subtitle": "Apple Silicon · arm64",
       "version": "v0.0.1",
-      "size": "~168 MB · Apple Silicon (arm64)",
-      "cta": "Download .dmg",
-      "note": "Right-click the .dmg → Open on first run (build is unsigned, academic prototype)."
+      "size": "168 MB · .dmg",
+      "cta": "Download"
     },
     "windows": {
       "title": "Windows",
-      "comingSoon": "Coming soon",
-      "eta": "Targeted for the next release",
-      "note": "Star the GitHub repo to be notified."
+      "osChip": "10+",
+      "subtitle": "x64 NSIS installer",
+      "eta": "Targeted for v0.1",
+      "note": "Star the repo to be notified",
+      "comingSoon": "Coming soon"
+    },
+    "integrity": {
+      "checksum": "SHA-256 verifiable on release",
+      "unsigned": "Unsigned · academic prototype",
+      "openSource": "Source on GitHub"
     }
   },
   "footer": {
