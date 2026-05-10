@@ -49,20 +49,22 @@
     }
   },
   "howItWorks": {
-    "title": "Three steps. Five seconds. Done.",
-    "subtitle": "From install to actionable feedback in under a minute.",
+    "eyebrow": "How it works",
+    "titlePart1": "Three steps,",
+    "titleEmphasis": "and you're calibrated.",
+    "subtitle": "From install to actionable feedback in under a minute. No account. No setup wizard. No friction.",
     "steps": {
       "download": {
         "title": "Download",
-        "description": "Grab the installer for macOS. No account, no email — just download and open."
+        "description": "Pick your platform. ~168 MB. Installs in under a minute. No account, no email."
       },
       "calibrate": {
         "title": "Calibrate",
-        "description": "Sit naturally for 5 seconds. PosturePal records your normal posture as a personal baseline."
+        "description": "Sit naturally for five seconds. PosturePal records your normal posture as a personal baseline."
       },
       "monitor": {
         "title": "Monitor",
-        "description": "Get gentle, intelligent alerts when you slip. The clinical safety layer protects against bad calibrations."
+        "description": "Receive quiet, intelligent alerts when you slip. The clinical safety layer protects against bad calibrations."
       }
     }
   },

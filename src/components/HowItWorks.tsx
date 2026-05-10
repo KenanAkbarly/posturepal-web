@@ -1,42 +1,59 @@
 import { useTranslations } from 'next-intl'
-import { Activity, Download, Sparkles } from 'lucide-react'
 
-const STEPS = [
-  { key: 'download', Icon: Download },
-  { key: 'calibrate', Icon: Sparkles },
-  { key: 'monitor', Icon: Activity }
-] as const
+const STEPS = ['download', 'calibrate', 'monitor'] as const
 
 export function HowItWorks(): React.JSX.Element {
   const t = useTranslations('howItWorks')
 
   return (
-    <section id="how-it-works" className="border-y bg-muted/30">
-      <div className="container py-16 md:py-24">
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-4xl">{t('title')}</h2>
-          <p className="mt-3 text-muted-foreground">{t('subtitle')}</p>
+    <section
+      id="how-it-works"
+      className="relative border-t border-hairline-soft bg-base"
+    >
+      <div className="container mx-auto px-6 py-24 md:py-32">
+        <div className="max-w-2xl">
+          <span className="font-mono text-xs uppercase tracking-[0.2em] text-sage-400">
+            {t('eyebrow')}
+          </span>
+          <h2 className="mt-4 text-3xl md:text-5xl font-medium tracking-[-0.02em] leading-[1.05] text-ink">
+            {t('titlePart1')}{' '}
+            <span className="font-serif italic font-normal text-ink-2">
+              {t('titleEmphasis')}
+            </span>
+          </h2>
+          <p className="mt-5 max-w-prose text-[15px] md:text-base leading-relaxed text-ink-2">
+            {t('subtitle')}
+          </p>
         </div>
-        <ol className="relative mt-12 grid gap-10 md:grid-cols-3">
-          <span
+
+        <div className="relative mt-16 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
+          {/* Desktop: dashed horizontal connector */}
+          <div
             aria-hidden
-            className="absolute left-0 right-0 top-7 hidden h-px bg-gradient-to-r from-transparent via-border to-transparent md:block"
+            className="absolute top-7 left-[12%] right-[12%] hidden md:block border-t border-dashed border-sage-400/25"
           />
-          {STEPS.map(({ key, Icon }, i) => (
-            <li key={key} className="relative flex flex-col items-center gap-3 text-center">
-              <div className="relative z-10 flex h-14 w-14 items-center justify-center rounded-full border-2 border-primary bg-background text-primary">
-                <Icon className="h-6 w-6" />
+          {/* Mobile: dashed vertical connector */}
+          <div
+            aria-hidden
+            className="absolute top-14 bottom-14 left-7 w-px md:hidden border-l border-dashed border-sage-400/25"
+          />
+
+          {STEPS.map((key, i) => (
+            <div key={key} className="relative">
+              <div className="relative z-10 mb-6 inline-flex h-14 w-14 items-center justify-center rounded-full border border-hairline bg-base">
+                <span className="font-serif italic text-2xl text-sage-400">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
               </div>
-              <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground">
-                {String(i + 1).padStart(2, '0')}
-              </div>
-              <h3 className="text-lg font-semibold">{t(`steps.${key}.title`)}</h3>
-              <p className="max-w-xs text-sm text-muted-foreground">
+              <h3 className="text-xl font-medium tracking-tight text-ink mb-2">
+                {t(`steps.${key}.title`)}
+              </h3>
+              <p className="max-w-xs text-[15px] leading-relaxed text-ink-2">
                 {t(`steps.${key}.description`)}
               </p>
-            </li>
+            </div>
           ))}
-        </ol>
+        </div>
       </div>
     </section>
   )

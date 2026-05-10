@@ -49,20 +49,22 @@
     }
   },
   "howItWorks": {
-    "title": "Üç adım. Beş saniye. Tamam.",
-    "subtitle": "Kurulumdan eyleme dönüştürülebilir geri bildirime bir dakikadan kısa sürede.",
+    "eyebrow": "Nasıl çalışır",
+    "titlePart1": "Üç adım,",
+    "titleEmphasis": "kalibrasyon hazır.",
+    "subtitle": "Kurulumdan eyleme dönüştürülebilir geri bildirime bir dakikadan kısa sürede. Hesap yok. Kurulum sihirbazı yok. Sürtünme yok.",
     "steps": {
       "download": {
         "title": "İndirin",
-        "description": "macOS için kurulum dosyasını alın. Hesap yok, e-posta yok — sadece indir ve aç."
+        "description": "Platformunuzu seçin. ~168 MB. Bir dakikadan kısa sürede kurulur. Hesap yok, e-posta yok."
       },
       "calibrate": {
         "title": "Kalibre edin",
-        "description": "5 saniye boyunca rahatça oturun. PosturePal sizin normal duruşunuzu kişisel taban olarak kaydeder."
+        "description": "Beş saniye boyunca doğal şekilde oturun. PosturePal normal duruşunuzu kişisel taban olarak kaydeder."
       },
       "monitor": {
         "title": "İzleyin",
-        "description": "Duruşunuz bozulduğunda nazik ve akıllı uyarılar alın. Klinik güvenlik katmanı kötü kalibrasyonlara karşı koruma sağlar."
+        "description": "Duruşunuz bozulduğunda sakin ve akıllı uyarılar alın. Klinik güvenlik katmanı kötü kalibrasyonlara karşı koruma sağlar."
       }
     }
   },
