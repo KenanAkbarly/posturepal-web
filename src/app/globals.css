@@ -4,48 +4,37 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-    --radius: 0.5rem;
-  }
+    /* Dark-only palette mapped to shadcn CSS variables.
+       Keeps un-overridden primitives (Button/Card/Badge/Separator)
+       coherent with the new design language. */
+    --background: 240 5% 4%;          /* base   #0A0A0B */
+    --foreground: 60 13% 95%;         /* ink    #F4F4F0 */
 
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --card: 240 9% 7%;                /* surface #111114 */
+    --card-foreground: 60 13% 95%;
+    --popover: 240 9% 7%;
+    --popover-foreground: 60 13% 95%;
+
+    --primary: 156 56% 67%;           /* sage-400 #7CDDB8 */
+    --primary-foreground: 240 5% 4%;
+
+    --secondary: 240 8% 10%;          /* surface-2 #17171B */
+    --secondary-foreground: 60 13% 95%;
+
+    --muted: 240 8% 10%;
+    --muted-foreground: 60 1% 66%;    /* ink-2 #A8A8A6 */
+
+    --accent: 240 9% 12%;
+    --accent-foreground: 60 13% 95%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 60 13% 95%;
+
+    --border: 240 11% 15%;             /* hairline #23232A */
+    --input: 240 11% 15%;
+    --ring: 156 56% 67%;
+
+    --radius: 0.625rem;
   }
 }
 
@@ -53,8 +42,12 @@
   * {
     @apply border-border;
   }
+  html,
   body {
-    @apply bg-background text-foreground;
+    height: 100%;
+  }
+  body {
+    @apply bg-base text-ink font-sans antialiased;
     font-feature-settings: 'rlig' 1, 'calt' 1;
   }
 }

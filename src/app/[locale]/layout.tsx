@@ -1,12 +1,18 @@
 import type { Metadata } from 'next'
 import { NextIntlClientProvider, hasLocale } from 'next-intl'
 import { notFound } from 'next/navigation'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist, Geist_Mono, Instrument_Serif } from 'next/font/google'
 import { routing } from '@/i18n/routing'
 import '../globals.css'
 
-const geistSans = Geist({ variable: '--font-geist-sans', subsets: ['latin'] })
-const geistMono = Geist_Mono({ variable: '--font-geist-mono', subsets: ['latin'] })
+const sans = Geist({ subsets: ['latin', 'latin-ext'], variable: '--font-sans' })
+const mono = Geist_Mono({ subsets: ['latin'], variable: '--font-mono' })
+const serif = Instrument_Serif({
+  subsets: ['latin', 'latin-ext'],
+  weight: '400',
+  style: ['normal', 'italic'],
+  variable: '--font-serif'
+})
 
 export const metadata: Metadata = {
   title: 'PosturePal — privacy-first posture monitoring',
@@ -33,10 +39,10 @@ export default async function LocaleLayout({
   return (
     <html
       lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`dark ${sans.variable} ${mono.variable} ${serif.variable} h-full antialiased`}
     >
       <body
-        className="min-h-full bg-background text-foreground"
+        className="min-h-full bg-base text-ink font-sans antialiased"
         suppressHydrationWarning
       >
         <NextIntlClientProvider>{children}</NextIntlClientProvider>
